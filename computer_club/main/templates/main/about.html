@@ -1,0 +1,89 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block title %}О нас - GameLegion{% endblock %}
+
+{% block content %}
+    <div class="container mt-5">
+        <h1 class="text-center">О компании GameLegion</h1>
+
+        <p class="lead text-center">
+            Добро пожаловать в <strong>GameLegion</strong> — место, где киберспорт и технологии объединяются!
+            Уже <strong>5 лет</strong> мы предоставляем игрокам лучшие условия для комфортной и продуктивной игры.
+        </p>
+
+        <h2 class="mt-4">Почему выбирают нас?</h2>
+        <ul class="list-group">
+            <li class="list-group-item"><i class="fas fa-check-circle" style="color: #16a085;"></i> Современные и мощные игровые компьютеры</li>
+            <li class="list-group-item"><i class="fas fa-check-circle" style="color: #16a085;"></i> Комфортные зоны для одиночной и командной игры</li>
+            <li class="list-group-item"><i class="fas fa-check-circle" style="color: #16a085;"></i> Турниры и соревнования с призами</li>
+            <li class="list-group-item"><i class="fas fa-check-circle" style="color: #16a085;"></i> Доступные цены и гибкая система бонусов</li>
+        </ul>
+
+        <h2 class="mt-5">Наши игровые компьютеры</h2>
+        <p>Мы используем только топовые игровые сборки, которые обеспечивают максимальную производительность. Вот три категории наших ПК:</p>
+
+        <div class="row mt-4">
+
+
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="{% static 'main/img/comp1.jpg' %}" class="card-img-top" alt="High-End PC">
+                    <div class="card-body">
+                        <h5 class="card-title">High-End Gaming PC</h5>
+                        <p class="card-text">
+                            <ul>
+                                <li>Процессор: Intel Core i9-13900K</li>
+                                <li>Видеокарта: NVIDIA RTX 4090</li>
+                                <li>ОЗУ: 32GB DDR5</li>
+                                <li>Монитор: 240 Гц, 2K</li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="{% static 'main/img/comp11.webp' %}" class="card-img-top" alt="Mid-Range PC">
+                    <div class="card-body">
+                        <h5 class="card-title">Mid-Range Gaming PC</h5>
+                        <p class="card-text">
+                            <ul>
+                                <li>Процессор: AMD Ryzen 7 7800X</li>
+                                <li>Видеокарта: NVIDIA RTX 3070 Ti</li>
+                                <li>ОЗУ: 16GB DDR4</li>
+                                <li>Монитор: 165 Гц, Full HD</li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="{% static 'main/img/shopping.webp' %}" class="card-img-top" alt="Budget PC">
+                    <div class="card-body">
+                        <h5 class="card-title">Budget Gaming PC</h5>
+                        <p class="card-text">
+                            <ul>
+                                <li>Процессор: Intel Core i5-12400F</li>
+                                <li>Видеокарта: NVIDIA GTX 1660 Super</li>
+                                <li>ОЗУ: 8GB DDR4</li>
+                                <li>Монитор: 144 Гц, Full HD</li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="mt-5">Присоединяйтесь к нам!</h2>
+        <p>
+            Мы ждем вас в GameLegion, чтобы вы могли насладиться качественной игрой на мощных ПК,
+            участвовать в турнирах и найти новых друзей! 🎮🔥
+        </p>
+    </div>
+{% endblock %}

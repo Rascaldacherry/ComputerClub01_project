@@ -1,0 +1,42 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Задача №1{% endblock %}
+
+{% block content %}
+    <div class="container mt-5">
+        <h1 class="text-center">Задача №1</h1>
+        <p>
+            Даны вещественные положительные числа a, b, c, d.
+            Выясните, может ли прямоугольник со сторонами a, b уместиться внутри прямоугольника c, d,
+            так чтобы каждая сторона внутреннего прямоугольника была параллельна или перпендикулярна стороне внешнего прямоугольника.
+        </p>
+
+        <form method="post" class="mt-4">
+            {% csrf_token %}
+            <div class="row"><div class="col-md-3">
+                    <label for="a" class="form-label">Сторона a:</label>
+                    <input type="number" step="1" name="a" id="a" class="form-control" required>
+                </div>
+                <div class="col-md-3">
+                    <label for="b" class="form-label">Сторона b:</label>
+                    <input type="number" step="1" name="b" id="b" class="form-control" required>
+                </div>
+                <div class="col-md-3">
+                    <label for="c" class="form-label">Сторона c:</label>
+                    <input type="number" step="1" name="c" id="c" class="form-control" required>
+                </div>
+                <div class="col-md-3">
+                    <label for="d" class="form-label">Сторона d:</label>
+                    <input type="number" step="1" name="d" id="d" class="form-control" required>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-success mt-3">Проверить</button>
+        </form>
+
+        {% if result is not None %}
+            <div class="alert alert-info mt-4">
+                <strong>Результат:</strong> {{ result }}
+            </div>
+        {% endif %}
+    </div>
+{% endblock %}

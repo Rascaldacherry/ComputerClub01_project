@@ -1,0 +1,60 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}GameLegion - Главная{% endblock %}
+
+{% block content %}
+    <div class="container mt-5">
+        <h1 class="text-center">Добро пожаловать в <span style="color: #16a085;">GameLegion</span>!</h1>
+
+        <p class="lead text-center">
+            GameLegion — это не просто компьютерный клуб, а настоящий рай для геймеров.
+            У нас вы найдете лучшее оборудование, комфортные зоны, турниры и атмосферу настоящего киберспорта!
+        </p>
+
+        <h2 class="mt-4">Что вас ждет в GameLegion?</h2>
+        <ul class="list-group">
+            <li class="list-group-item"><i class="fas fa-gamepad" style="color: #16a085;"></i> Более 50 мощных игровых компьютеров</li>
+            <li class="list-group-item"><i class="fas fa-headset" style="color: #16a085;"></i> Профессиональные игровые гарнитуры и кресла</li>
+            <li class="list-group-item"><i class="fas fa-trophy" style="color: #16a085;"></i> Регулярные турниры с ценными призами</li>
+            <li class="list-group-item"><i class="fas fa-coffee" style="color: #16a085;"></i> Лаунж-зона с напитками и закусками</li>
+            <li class="list-group-item"><i class="fas fa-users" style="color: #16a085;"></i> Дружеская атмосфера и киберспортивное сообщество</li>
+        </ul>
+
+        <h2 class="mt-5">Наши тарифы</h2>
+        <table class="table table-bordered mt-3">
+            <thead>
+                <tr class="table-dark">
+                    <th>Тариф</th>
+                    <th>Время</th>
+                    <th>Цена</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Базовый</td>
+                    <td>1 час</td>
+                    <td>350₽</td>
+                </tr>
+                <tr>
+                    <td>Стандарт</td>
+                    <td>3 часа</td>
+                    <td>700₽</td>
+                </tr>
+                <tr>
+                    <td>Премиум</td>
+                    <td>Весь день</td>
+                    <td>3200₽</td>
+                </tr>
+            </tbody>
+        </table>
+
+
+        <h2 class="mt-5">Присоединяйтесь!</h2>
+        <p>
+            Хотите окунуться в мир киберспорта? Ждем вас в GameLegion!
+            Забронируйте место прямо сейчас и станьте частью нашей киберспортивной команды!
+        </p>
+
+        <a href="/location" class="btn btn-success btn-lg">Посмотреть локацию</a>
+    </div>
+{% endblock %}

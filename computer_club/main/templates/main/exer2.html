@@ -1,0 +1,65 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+{% block title %}Задача №2 - Я и моя образовательная программа{% endblock %}
+
+{% block content %}
+    <div class="container mt-5">
+        <h1 class="text-center">Я и моя образовательная программа</h1>
+
+        <h2 class="mt-4">Студент</h2>
+
+        <div class="mt-4">
+            <h3>Группа: БМЭ223</h3>
+            <div class="d-flex align-items-center">
+                <img src="{% static student.photo %}" alt="Фото студента" class="rounded-circle me-3" width="100">
+                <div>
+                    <p><strong>ФИО:</strong> {{ student.name }}</p>
+                    <p><strong>Телефон:</strong> {{ student.phone }}</p>
+                    <p><strong>Email:</strong> <a href="mailto:{{ student.email }}">{{ student.email }}</a></p>
+                </div>
+            </div>
+        </div>
+
+        <h3 class="mt-5"><strong>Название программы</strong></h3>
+        <p><strong>{{ program.name }}</strong></p>
+        <p>{{ program.description }}</p>
+
+        <div class="mt-5">
+            <h3>Руководитель программы</h3>
+            <div class="d-flex align-items-center">
+                <img src="{% static supervisor.photo %}" alt="Фото руководителя" class="rounded-circle me-3" width="100">
+                <div>
+                    <p><strong>ФИО:</strong> {{ supervisor.name }}</p>
+                    <p><strong>Email:</strong> <a href="mailto:{{ supervisor.email }}">{{ supervisor.email }}</a></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-5">
+            <h3>Менеджер программы</h3>
+            <div class="d-flex align-items-center">
+                <img src="{% static manager.photo %}" alt="Фото менеджера" class="rounded-circle me-3" width="100">
+                <div>
+                    <p><strong>ФИО:</strong> {{ manager.name }}</p>
+                    <p><strong>Email:</strong> <a href="mailto:{{ manager.email }}">{{ manager.email }}</a></p>
+                </div>
+            </div>
+        </div>
+
+        <h3 class="mt-5">Мои сокурсники</h3>
+        <div class="row">
+            {% for classmate in classmates %}
+            <div class="col-md-6">
+                <div class="d-flex align-items-center mb-3">
+                    <img src="{% static classmate.photo %}" alt="Фото {{ classmate.name }}" class="rounded-circle me-3" width="100">
+                    <div>
+                        <p><strong>ФИО:</strong> {{ classmate.name }}</p>
+                        <p><strong>Телефон:</strong> {{ classmate.phone }}</p>
+                        <p><strong>Email:</strong> <a href="mailto:{{ classmate.email }}">{{ classmate.email }}</a></p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
